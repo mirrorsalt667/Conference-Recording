@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+// App 剛進來的頁面
 @main
 struct Conference_RecordingApp: App {
+  @StateObject private var db = SQLiteManager()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          // 在初始頁加入environmentObject 解決 swift:70: Fatal error: No ObservableObject of 錯誤。
+          ContentView().environmentObject(db)
         }
     }
 }

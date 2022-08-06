@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		642ED3E2289E1BAE002018EE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 642ED3E1289E1B9A002018EE /* libsqlite3.tbd */; };
+		642ED3E7289E246B002018EE /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642ED3E6289E246B002018EE /* SQLiteManager.swift */; };
+		642ED3E9289E451B002018EE /* testComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642ED3E8289E451B002018EE /* testComponents.swift */; };
+		642ED3EC289E5490002018EE /* FMDB in Frameworks */ = {isa = PBXBuildFile; productRef = 642ED3EB289E5490002018EE /* FMDB */; };
+		642ED3EE289E5B5D002018EE /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642ED3ED289E5B5D002018EE /* RecordModel.swift */; };
 		6433B51C28980DDB003D446D /* Conference_RecordingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6433B51B28980DDB003D446D /* Conference_RecordingApp.swift */; };
 		6433B51E28980DDB003D446D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6433B51D28980DDB003D446D /* ContentView.swift */; };
 		6433B52028980DDD003D446D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6433B51F28980DDD003D446D /* Assets.xcassets */; };
@@ -14,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		642ED3E1289E1B9A002018EE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		642ED3E4289E1E11002018EE /* sqlHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sqlHeader.h; sourceTree = "<group>"; };
+		642ED3E6289E246B002018EE /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
+		642ED3E8289E451B002018EE /* testComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testComponents.swift; sourceTree = "<group>"; };
+		642ED3ED289E5B5D002018EE /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 		6433B51828980DDB003D446D /* Conference Recording.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conference Recording.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6433B51B28980DDB003D446D /* Conference_RecordingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conference_RecordingApp.swift; sourceTree = "<group>"; };
 		6433B51D28980DDB003D446D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +36,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642ED3E2289E1BAE002018EE /* libsqlite3.tbd in Frameworks */,
+				642ED3EC289E5490002018EE /* FMDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		642ED3E0289E1B99002018EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				642ED3E1289E1B9A002018EE /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		642ED3E3289E1DD1002018EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				642ED3E4289E1E11002018EE /* sqlHeader.h */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		642ED3E5289E242E002018EE /* Management */ = {
+			isa = PBXGroup;
+			children = (
+				642ED3E6289E246B002018EE /* SQLiteManager.swift */,
+			);
+			path = Management;
+			sourceTree = "<group>";
+		};
 		6433B50F28980DDB003D446D = {
 			isa = PBXGroup;
 			children = (
 				6433B51A28980DDB003D446D /* Conference Recording */,
 				6433B51928980DDB003D446D /* Products */,
+				642ED3E0289E1B99002018EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,8 +88,12 @@
 		6433B51A28980DDB003D446D /* Conference Recording */ = {
 			isa = PBXGroup;
 			children = (
+				642ED3E5289E242E002018EE /* Management */,
+				642ED3E3289E1DD1002018EE /* Frameworks */,
 				6433B51B28980DDB003D446D /* Conference_RecordingApp.swift */,
 				6433B51D28980DDB003D446D /* ContentView.swift */,
+				642ED3E8289E451B002018EE /* testComponents.swift */,
+				642ED3ED289E5B5D002018EE /* RecordModel.swift */,
 				6433B51F28980DDD003D446D /* Assets.xcassets */,
 				6433B52128980DDD003D446D /* Preview Content */,
 			);
@@ -83,6 +124,9 @@
 			dependencies = (
 			);
 			name = "Conference Recording";
+			packageProductDependencies = (
+				642ED3EB289E5490002018EE /* FMDB */,
+			);
 			productName = "Conference Recording";
 			productReference = 6433B51828980DDB003D446D /* Conference Recording.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +155,9 @@
 				Base,
 			);
 			mainGroup = 6433B50F28980DDB003D446D;
+			packageReferences = (
+				642ED3EA289E5490002018EE /* XCRemoteSwiftPackageReference "fmdb" */,
+			);
 			productRefGroup = 6433B51928980DDB003D446D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642ED3E7289E246B002018EE /* SQLiteManager.swift in Sources */,
+				642ED3E9289E451B002018EE /* testComponents.swift in Sources */,
 				6433B51E28980DDB003D446D /* ContentView.swift in Sources */,
+				642ED3EE289E5B5D002018EE /* RecordModel.swift in Sources */,
 				6433B51C28980DDB003D446D /* Conference_RecordingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,7 +246,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -251,7 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -277,7 +327,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -286,6 +336,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "stephen1.Conference-Recording";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Conference Recording/Frameworks/sqlHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -307,7 +358,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +367,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "stephen1.Conference-Recording";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Conference Recording/Frameworks/sqlHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -343,6 +395,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		642ED3EA289E5490002018EE /* XCRemoteSwiftPackageReference "fmdb" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ccgus/fmdb";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		642ED3EB289E5490002018EE /* FMDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 642ED3EA289E5490002018EE /* XCRemoteSwiftPackageReference "fmdb" */;
+			productName = FMDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6433B51028980DDB003D446D /* Project object */;
 }

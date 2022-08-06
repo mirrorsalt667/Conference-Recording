@@ -8,20 +8,59 @@
 import SwiftUI
 
 struct ContentView: View {
-  let array = [
+  @EnvironmentObject var db: SQLiteManager
+
+//  let tSQLiteManager = SQLiteManager()
+//  let array = [
 //    conferenceTitleType(title: "標題", timeStr: "日期"),
-    conferenceTitleType(title: "會議1", timeStr: "2022/07/23"),
-    conferenceTitleType(title: "會議2", timeStr: "2022/07/26")
-  ]
+//    conferenceTitleType(title: "會議1", timeStr: "2022/07/23"),
+//    conferenceTitleType(title: "會議2", timeStr: "2022/07/26")
+//  ]
 
   var body: some View {
-    List(array) { arr in
-      HStack {
-        Text(arr.title)
+    NavigationView {
+      List(db.users, id: \.self) { user in
+        HStack {
+          Text("\(user.image)")
           Spacer()
-        Text(arr.timeStr)
+          Text(user.fact)
+        }
+      }
+      .navigationTitle("USERS")
+      .toolbar {
+        ToolbarItem(id: "plus", placement: .navigationBarTrailing, showsByDefault: true) {
+          Button {
+            createRandomUser()
+          } label: {
+            Image(systemName: "plus")
+          }
+        }
       }
     }
+    .onAppear {
+      print("view show out")
+    }
+    .onDisappear {
+      print("view disappear")
+    }
+  }
+
+  private func createRandomUser() {
+    let url = URL(string: "https://some-random-api.ml/animal/dog")!
+    let task = URLSession.shared.dataTask(with: url) { data, _, error in
+      guard let data = data else {
+        fatalError("no data")
+      }
+      do {
+        let user = try JSONDecoder().decode(User.self, from: data)
+        DispatchQueue.main.async {
+          db.insert(user)
+        }
+      } catch {
+        print("解析錯誤", error, "<--<")
+      }
+    }
+    task.resume()
   }
 }
 
@@ -31,8 +70,8 @@ struct ContentView_Previews: PreviewProvider {
   }
 }
 
-struct conferenceTitleType: Identifiable {
-  let id = UUID()
-  let title: String
-  let timeStr: String
-}
+// struct conferenceTitleType: Identifiable {
+//  let id = UUID()
+//  let title: String
+//  let timeStr: String
+// }
