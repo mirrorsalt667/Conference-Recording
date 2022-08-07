@@ -2,7 +2,7 @@
 //  SQLiteManager.swift
 //  Conference Recording
 //
-//  Created by 黃肇祺 on 2022/8/6.
+//  Created on 2022/8/6.
 //
 
 // sqlite 新增資料庫、表單、讀取資料、新增資料
