@@ -12,6 +12,11 @@
 		642ED3E9289E451B002018EE /* testComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642ED3E8289E451B002018EE /* testComponents.swift */; };
 		642ED3EC289E5490002018EE /* FMDB in Frameworks */ = {isa = PBXBuildFile; productRef = 642ED3EB289E5490002018EE /* FMDB */; };
 		642ED3EE289E5B5D002018EE /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642ED3ED289E5B5D002018EE /* RecordModel.swift */; };
+		642ED3F0289EAAF8002018EE /* RecordingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642ED3EF289EAAF8002018EE /* RecordingPage.swift */; };
+		642ED3F2289EB1C8002018EE /* TypingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642ED3F1289EB1C8002018EE /* TypingPage.swift */; };
+		642ED3F4289FA503002018EE /* StartingNewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642ED3F3289FA503002018EE /* StartingNewPage.swift */; };
+		642ED3F6289FBD17002018EE /* ShowRecordPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642ED3F5289FBD17002018EE /* ShowRecordPage.swift */; };
+		642ED3F8289FBFFE002018EE /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642ED3F7289FBFFE002018EE /* SettingPage.swift */; };
 		6433B51C28980DDB003D446D /* Conference_RecordingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6433B51B28980DDB003D446D /* Conference_RecordingApp.swift */; };
 		6433B51E28980DDB003D446D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6433B51D28980DDB003D446D /* ContentView.swift */; };
 		6433B52028980DDD003D446D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6433B51F28980DDD003D446D /* Assets.xcassets */; };
@@ -24,6 +29,11 @@
 		642ED3E6289E246B002018EE /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		642ED3E8289E451B002018EE /* testComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testComponents.swift; sourceTree = "<group>"; };
 		642ED3ED289E5B5D002018EE /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
+		642ED3EF289EAAF8002018EE /* RecordingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingPage.swift; sourceTree = "<group>"; };
+		642ED3F1289EB1C8002018EE /* TypingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingPage.swift; sourceTree = "<group>"; };
+		642ED3F3289FA503002018EE /* StartingNewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingNewPage.swift; sourceTree = "<group>"; };
+		642ED3F5289FBD17002018EE /* ShowRecordPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRecordPage.swift; sourceTree = "<group>"; };
+		642ED3F7289FBFFE002018EE /* SettingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPage.swift; sourceTree = "<group>"; };
 		6433B51828980DDB003D446D /* Conference Recording.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conference Recording.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6433B51B28980DDB003D446D /* Conference_RecordingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conference_RecordingApp.swift; sourceTree = "<group>"; };
 		6433B51D28980DDB003D446D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				642ED3E6289E246B002018EE /* SQLiteManager.swift */,
+				642ED3ED289E5B5D002018EE /* RecordModel.swift */,
 			);
 			path = Management;
 			sourceTree = "<group>";
@@ -92,8 +103,12 @@
 				642ED3E3289E1DD1002018EE /* Frameworks */,
 				6433B51B28980DDB003D446D /* Conference_RecordingApp.swift */,
 				6433B51D28980DDB003D446D /* ContentView.swift */,
+				642ED3F5289FBD17002018EE /* ShowRecordPage.swift */,
+				642ED3F3289FA503002018EE /* StartingNewPage.swift */,
+				642ED3EF289EAAF8002018EE /* RecordingPage.swift */,
+				642ED3F1289EB1C8002018EE /* TypingPage.swift */,
+				642ED3F7289FBFFE002018EE /* SettingPage.swift */,
 				642ED3E8289E451B002018EE /* testComponents.swift */,
-				642ED3ED289E5B5D002018EE /* RecordModel.swift */,
 				6433B51F28980DDD003D446D /* Assets.xcassets */,
 				6433B52128980DDD003D446D /* Preview Content */,
 			);
@@ -185,10 +200,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				642ED3E7289E246B002018EE /* SQLiteManager.swift in Sources */,
+				642ED3F8289FBFFE002018EE /* SettingPage.swift in Sources */,
 				642ED3E9289E451B002018EE /* testComponents.swift in Sources */,
+				642ED3F0289EAAF8002018EE /* RecordingPage.swift in Sources */,
+				642ED3F4289FA503002018EE /* StartingNewPage.swift in Sources */,
 				6433B51E28980DDB003D446D /* ContentView.swift in Sources */,
 				642ED3EE289E5B5D002018EE /* RecordModel.swift in Sources */,
 				6433B51C28980DDB003D446D /* Conference_RecordingApp.swift in Sources */,
+				642ED3F6289FBD17002018EE /* ShowRecordPage.swift in Sources */,
+				642ED3F2289EB1C8002018EE /* TypingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

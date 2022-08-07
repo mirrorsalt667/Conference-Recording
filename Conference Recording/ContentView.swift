@@ -2,13 +2,15 @@
 //  ContentView.swift
 //  Conference Recording
 //
-//  Created by 黃肇祺 on 2022/8/1.
+//  Created on 2022/8/1.
 //
 
+// 首頁
 import SwiftUI
 
 struct ContentView: View {
   @EnvironmentObject var db: SQLiteManager
+  @State var newRecordingPopover: Bool = false
 
 //  let tSQLiteManager = SQLiteManager()
 //  let array = [
@@ -24,15 +26,27 @@ struct ContentView: View {
           Text("\(user.image)")
           Spacer()
           Text(user.fact)
+          NavigationLink {
+            ShowRecordPage()
+          } label: {
+            EmptyView()
+          }
         }
       }
       .navigationTitle("USERS")
       .toolbar {
         ToolbarItem(id: "plus", placement: .navigationBarTrailing, showsByDefault: true) {
+          NavigationLink {
+            StartingNewPage()
+          } label: {
+            Image(systemName: "plus")
+          }
+        }
+        ToolbarItem(id: "new", placement: .navigationBarLeading, showsByDefault: true) {
           Button {
             createRandomUser()
           } label: {
-            Image(systemName: "plus")
+            Image(systemName: "moon")
           }
         }
       }
